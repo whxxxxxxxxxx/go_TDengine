@@ -13,5 +13,7 @@ func main() {
 		fmt.Println("failed to connect TDengine, err:", err)
 		return
 	}
-	print(taos)
+	println(taos)
+	defer taos.Close()
+
 }
